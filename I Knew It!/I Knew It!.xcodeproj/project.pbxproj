@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F79265EFF5C00C55B1B /* AppDelegate.swift */; };
 		22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F7B265EFF5C00C55B1B /* SceneDelegate.swift */; };
-		22088F7E265EFF5C00C55B1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F7D265EFF5C00C55B1B /* ViewController.swift */; };
-		22088F81265EFF5C00C55B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F7F265EFF5C00C55B1B /* Main.storyboard */; };
+		22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F7D265EFF5C00C55B1B /* StartingViewController.swift */; };
+		22088F81265EFF5C00C55B1B /* Starting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F7F265EFF5C00C55B1B /* Starting.storyboard */; };
 		22088F83265EFF5E00C55B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22088F82265EFF5E00C55B1B /* Assets.xcassets */; };
 		22088F86265EFF5E00C55B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */; };
 		22088F91265EFF5E00C55B1B /* I_Knew_It_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F90265EFF5E00C55B1B /* I_Knew_It_Tests.swift */; };
 		22088F9C265EFF5E00C55B1B /* I_Knew_It_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F9B265EFF5E00C55B1B /* I_Knew_It_UITests.swift */; };
+		2276D8E0265F1AE3003CA886 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */; };
+		2276D8E1265F1AE3003CA886 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */; };
+		2276D8E2265F1AE3003CA886 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DF265F1AE3003CA886 /* SF-Pro-Text-Regular.otf */; };
+		2276D8E9265F1B03003CA886 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E6265F1B03003CA886 /* SF-Pro-Display-Semibold.otf */; };
+		2276D8EA265F1B03003CA886 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */; };
+		2276D8EB265F1B03003CA886 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,8 @@
 		22088F76265EFF5C00C55B1B /* I Knew It!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Knew It!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22088F79265EFF5C00C55B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22088F7B265EFF5C00C55B1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		22088F7D265EFF5C00C55B1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		22088F80265EFF5C00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		22088F7D265EFF5C00C55B1B /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
+		22088F80265EFF5C00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Starting.storyboard; sourceTree = "<group>"; };
 		22088F82265EFF5E00C55B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22088F85265EFF5E00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22088F87265EFF5E00C55B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		22088F97265EFF5E00C55B1B /* I Knew It!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I Knew It!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22088F9B265EFF5E00C55B1B /* I_Knew_It_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_Knew_It_UITests.swift; sourceTree = "<group>"; };
 		22088F9D265EFF5E00C55B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
+		2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
+		2276D8DF265F1AE3003CA886 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
+		2276D8E6265F1B03003CA886 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
+		2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
+		2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				22088FAF265F003700C55B1B /* StoryBoards */,
-				22088FB5265F00BD00C55B1B /* Views */,
+				22088FB5265F00BD00C55B1B /* Controllers */,
 				22088FB0265F009600C55B1B /* Resources */,
 				22088FB1265F00A200C55B1B /* SupportingFiles */,
 			);
@@ -128,7 +140,7 @@
 		22088FAF265F003700C55B1B /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				22088F7F265EFF5C00C55B1B /* Main.storyboard */,
+				22088F7F265EFF5C00C55B1B /* Starting.storyboard */,
 				22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
@@ -137,6 +149,7 @@
 		22088FB0265F009600C55B1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				2276D8DC265F1ABC003CA886 /* Fonts */,
 				22088F82265EFF5E00C55B1B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -152,12 +165,25 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
-		22088FB5265F00BD00C55B1B /* Views */ = {
+		22088FB5265F00BD00C55B1B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				22088F7D265EFF5C00C55B1B /* ViewController.swift */,
+				22088F7D265EFF5C00C55B1B /* StartingViewController.swift */,
 			);
-			path = Views;
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2276D8DC265F1ABC003CA886 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */,
+				2276D8DF265F1AE3003CA886 /* SF-Pro-Text-Regular.otf */,
+				2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */,
+				2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */,
+				2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */,
+				2276D8E6265F1B03003CA886 /* SF-Pro-Display-Semibold.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,9 +289,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2276D8E2265F1AE3003CA886 /* SF-Pro-Text-Regular.otf in Resources */,
+				2276D8E0265F1AE3003CA886 /* SF-Pro-Text-Semibold.otf in Resources */,
 				22088F86265EFF5E00C55B1B /* LaunchScreen.storyboard in Resources */,
+				2276D8E9265F1B03003CA886 /* SF-Pro-Display-Semibold.otf in Resources */,
 				22088F83265EFF5E00C55B1B /* Assets.xcassets in Resources */,
-				22088F81265EFF5C00C55B1B /* Main.storyboard in Resources */,
+				22088F81265EFF5C00C55B1B /* Starting.storyboard in Resources */,
+				2276D8EA265F1B03003CA886 /* SF-Pro-Display-Light.otf in Resources */,
+				2276D8EB265F1B03003CA886 /* SF-Pro-Display-Regular.otf in Resources */,
+				2276D8E1265F1AE3003CA886 /* SF-Pro-Text-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				22088F7E265EFF5C00C55B1B /* ViewController.swift in Sources */,
+				22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */,
 				22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */,
 				22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */,
 			);
@@ -328,12 +360,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		22088F7F265EFF5C00C55B1B /* Main.storyboard */ = {
+		22088F7F265EFF5C00C55B1B /* Starting.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				22088F80265EFF5C00C55B1B /* Base */,
 			);
-			name = Main.storyboard;
+			name = Starting.storyboard;
 			sourceTree = "<group>";
 		};
 		22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */ = {
@@ -470,7 +502,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWKUVZUV6F;
-				INFOPLIST_FILE = "I Knew It!/Info.plist";
+				INFOPLIST_FILE = "I Knew It!/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -489,7 +521,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JWKUVZUV6F;
-				INFOPLIST_FILE = "I Knew It!/Info.plist";
+				INFOPLIST_FILE = "I Knew It!/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

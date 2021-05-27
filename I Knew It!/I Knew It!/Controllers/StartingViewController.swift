@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  StartingViewController.swift
 //  I Knew It!
 //
 //  Created by Тимур Таймасов on 27.05.2021.
@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartingViewController: UIViewController {
 
+    @IBOutlet weak var logoStackView: UIStackView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        
     }
 
 

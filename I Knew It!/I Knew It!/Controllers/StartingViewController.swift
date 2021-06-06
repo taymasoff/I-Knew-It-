@@ -60,6 +60,8 @@ class StartingViewController: UIViewController {
 private extension StartingViewController {
     
     // MARK: - Animations Management
+    
+    /// Do all animations needed at view appearance
     func animateStuff() {
         if !animationPerformedOnce {
             animateLogoStackView()
@@ -70,6 +72,7 @@ private extension StartingViewController {
         }
     }
     
+    /// Moves logo and appname label slightly up
     func animateLogoStackView() {
         UIView.animate(
             withDuration: 1.0,
@@ -81,6 +84,7 @@ private extension StartingViewController {
             }, completion: nil)
     }
     
+    /// Fade In label animation
     func fadeInDescriptionLabel() {
         descriptionLabel.alpha = 0.0
         UIView.animate(
@@ -91,22 +95,61 @@ private extension StartingViewController {
                 self.descriptionLabel.alpha = 1.0
             }, completion: nil)
     }
-
+    
+    /// Fade In button animation
     func fadeInButton() {
         acceptButton.alpha = 0.0
         UIView.animate(
             withDuration: 1.0,
-            delay: 2.5,
+            delay: 1.5,
             options: .curveEaseIn,
             animations: {
                 self.acceptButton.alpha = 1.0
             }, completion: nil)
     }
     
+    /// Does a 'dive' effect transition by scaling up the button
+    func animateButtonDive() {
+        
+        // Hides button's text first
+        UIView.animate(
+            withDuration: 0.2,
+            delay: 0.0,
+            options: .curveEaseOut,
+            animations: {
+                self.acceptButton.titleLabel?.alpha = 0.0
+            }, completion: { _ in
+                // Scales button to the size of the screen to make a nice transition into
+                // the second view
+                let acceptButtonLastPosition = self.acceptButton.center
+                UIView.animate(
+                    withDuration: 1.0,
+                    delay: 0.0,
+                    options: [.preferredFramesPerSecond60, .curveEaseIn],
+                    animations: {
+                        self.acceptButton.transform = CGAffineTransform(
+                            scaleX: self.view.frame.width/self.acceptButton.frame.width,
+                            y: self.view.frame.height/self.acceptButton.frame.height)
+                        self.acceptButton.center = self.view.center
+                        self.acceptButton.layer.cornerRadius = 0
+                        
+                    }, completion: { _ in
+                        // Performs non-animated segue as soon as button fills the screen
+                        self.performSegue(withIdentifier: Segues.toQuiz, sender: nil)
+                        
+                        // Brings it all back to original values
+                        self.acceptButton.transform = CGAffineTransform.identity
+                        self.acceptButton.titleLabel?.alpha = 1.0
+                        self.acceptButton.layer.cornerRadius = 5
+                        self.acceptButton.center = acceptButtonLastPosition
+                    })
+            })
+    }
+    
     // MARK: - Actions
     
     @IBAction func acceptButtonPressed(_ sender: UIButton) {
-        
+        animateButtonDive()
     }
     
 }

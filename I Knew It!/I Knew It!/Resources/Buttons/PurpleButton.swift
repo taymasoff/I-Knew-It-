@@ -13,7 +13,7 @@ class PurpleButton: UIButton {
     // MARK: - Init Methods
     
     override init(frame: CGRect) {
-        super.init(frame: frame);
+        super.init(frame: frame)
         
         updateButton()
     }

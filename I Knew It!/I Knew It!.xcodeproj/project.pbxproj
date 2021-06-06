@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD1C11ABB939EB394DB705C /* Pods_I_Knew_It_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7B5EE58004E6F6BD2CCD924 /* Pods_I_Knew_It_Tests.framework */; };
 		22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F79265EFF5C00C55B1B /* AppDelegate.swift */; };
 		22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F7B265EFF5C00C55B1B /* SceneDelegate.swift */; };
 		22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F7D265EFF5C00C55B1B /* StartingViewController.swift */; };
-		22088F81265EFF5C00C55B1B /* Starting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F7F265EFF5C00C55B1B /* Starting.storyboard */; };
+		22088F81265EFF5C00C55B1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F7F265EFF5C00C55B1B /* Main.storyboard */; };
 		22088F83265EFF5E00C55B1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22088F82265EFF5E00C55B1B /* Assets.xcassets */; };
 		22088F86265EFF5E00C55B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */; };
 		22088F91265EFF5E00C55B1B /* I_Knew_It_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F90265EFF5E00C55B1B /* I_Knew_It_Tests.swift */; };
@@ -21,6 +22,10 @@
 		2276D8E9265F1B03003CA886 /* SF-Pro-Display-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E6265F1B03003CA886 /* SF-Pro-Display-Semibold.otf */; };
 		2276D8EA265F1B03003CA886 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */; };
 		2276D8EB265F1B03003CA886 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */; };
+		22857E34266D02E300BF4E9C /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22857E33266D02E300BF4E9C /* PurpleButton.swift */; };
+		22857E48266D051200BF4E9C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22857E47266D051200BF4E9C /* Constants.swift */; };
+		A2D53E0343292D046E0081E5 /* Pods_I_Knew_It_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AAE0397B17BBC635DB96C9 /* Pods_I_Knew_It_.framework */; };
+		A3EA69861B2ED9E6DD36516C /* Pods_I_Knew_It__I_Knew_It_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD4D486A2822B2F83EB9946 /* Pods_I_Knew_It__I_Knew_It_UITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,11 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160B928FB8598A6A1E5ABE34 /* Pods-I Knew It!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!.release.xcconfig"; path = "Target Support Files/Pods-I Knew It!/Pods-I Knew It!.release.xcconfig"; sourceTree = "<group>"; };
 		22088F76265EFF5C00C55B1B /* I Knew It!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "I Knew It!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22088F79265EFF5C00C55B1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22088F7B265EFF5C00C55B1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		22088F7D265EFF5C00C55B1B /* StartingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingViewController.swift; sourceTree = "<group>"; };
-		22088F80265EFF5C00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Starting.storyboard; sourceTree = "<group>"; };
+		22088F80265EFF5C00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		22088F82265EFF5E00C55B1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		22088F85265EFF5E00C55B1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		22088F87265EFF5E00C55B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -61,6 +67,16 @@
 		2276D8E6265F1B03003CA886 /* SF-Pro-Display-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Semibold.otf"; sourceTree = "<group>"; };
 		2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
+		22857E33266D02E300BF4E9C /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		22857E47266D051200BF4E9C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../../../../../Constants.swift; sourceTree = "<group>"; };
+		62AAE0397B17BBC635DB96C9 /* Pods_I_Knew_It_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_Knew_It_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6FD4D486A2822B2F83EB9946 /* Pods_I_Knew_It__I_Knew_It_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_Knew_It__I_Knew_It_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E9D01F636E2A22A48D6808 /* Pods-I Knew It!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!.debug.xcconfig"; path = "Target Support Files/Pods-I Knew It!/Pods-I Knew It!.debug.xcconfig"; sourceTree = "<group>"; };
+		77056BC965E1F11EFE6487F0 /* Pods-I Knew It!-I Knew It!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!-I Knew It!UITests.debug.xcconfig"; path = "Target Support Files/Pods-I Knew It!-I Knew It!UITests/Pods-I Knew It!-I Knew It!UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B7B5EE58004E6F6BD2CCD924 /* Pods_I_Knew_It_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_Knew_It_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6228E1DBD26CFBB3B4E933E /* Pods-I Knew It!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!Tests.debug.xcconfig"; path = "Target Support Files/Pods-I Knew It!Tests/Pods-I Knew It!Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		D86367DD978B05A6EB8E7967 /* Pods-I Knew It!-I Knew It!UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!-I Knew It!UITests.release.xcconfig"; path = "Target Support Files/Pods-I Knew It!-I Knew It!UITests/Pods-I Knew It!-I Knew It!UITests.release.xcconfig"; sourceTree = "<group>"; };
+		E617960FAF52C7FB2EDF5197 /* Pods-I Knew It!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-I Knew It!Tests.release.xcconfig"; path = "Target Support Files/Pods-I Knew It!Tests/Pods-I Knew It!Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2D53E0343292D046E0081E5 /* Pods_I_Knew_It_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD1C11ABB939EB394DB705C /* Pods_I_Knew_It_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3EA69861B2ED9E6DD36516C /* Pods_I_Knew_It__I_Knew_It_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +114,8 @@
 				22088F8F265EFF5E00C55B1B /* I Knew It!Tests */,
 				22088F9A265EFF5E00C55B1B /* I Knew It!UITests */,
 				22088F77265EFF5C00C55B1B /* Products */,
+				5D31FA95A5651002A7FEA4AF /* Pods */,
+				9A9B3E3AAF9FCFEDD2F0ECF5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -111,7 +132,7 @@
 		22088F78265EFF5C00C55B1B /* I Knew It! */ = {
 			isa = PBXGroup;
 			children = (
-				22088FAF265F003700C55B1B /* StoryBoards */,
+				22088FAF265F003700C55B1B /* Storyboards */,
 				22088FB5265F00BD00C55B1B /* Controllers */,
 				22088FB0265F009600C55B1B /* Resources */,
 				22088FB1265F00A200C55B1B /* SupportingFiles */,
@@ -137,18 +158,20 @@
 			path = "I Knew It!UITests";
 			sourceTree = "<group>";
 		};
-		22088FAF265F003700C55B1B /* StoryBoards */ = {
+		22088FAF265F003700C55B1B /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				22088F7F265EFF5C00C55B1B /* Starting.storyboard */,
+				22088F7F265EFF5C00C55B1B /* Main.storyboard */,
 				22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */,
 			);
-			path = StoryBoards;
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		22088FB0265F009600C55B1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				22857E47266D051200BF4E9C /* Constants.swift */,
+				22857E32266D021C00BF4E9C /* Buttons */,
 				2276D8DC265F1ABC003CA886 /* Fonts */,
 				22088F82265EFF5E00C55B1B /* Assets.xcassets */,
 			);
@@ -186,6 +209,37 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		22857E32266D021C00BF4E9C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				22857E33266D02E300BF4E9C /* PurpleButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		5D31FA95A5651002A7FEA4AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70E9D01F636E2A22A48D6808 /* Pods-I Knew It!.debug.xcconfig */,
+				160B928FB8598A6A1E5ABE34 /* Pods-I Knew It!.release.xcconfig */,
+				77056BC965E1F11EFE6487F0 /* Pods-I Knew It!-I Knew It!UITests.debug.xcconfig */,
+				D86367DD978B05A6EB8E7967 /* Pods-I Knew It!-I Knew It!UITests.release.xcconfig */,
+				C6228E1DBD26CFBB3B4E933E /* Pods-I Knew It!Tests.debug.xcconfig */,
+				E617960FAF52C7FB2EDF5197 /* Pods-I Knew It!Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A9B3E3AAF9FCFEDD2F0ECF5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				62AAE0397B17BBC635DB96C9 /* Pods_I_Knew_It_.framework */,
+				6FD4D486A2822B2F83EB9946 /* Pods_I_Knew_It__I_Knew_It_UITests.framework */,
+				B7B5EE58004E6F6BD2CCD924 /* Pods_I_Knew_It_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -193,9 +247,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22088FA0265EFF5E00C55B1B /* Build configuration list for PBXNativeTarget "I Knew It!" */;
 			buildPhases = (
+				EB3D340BDF83C708ED19A386 /* [CP] Check Pods Manifest.lock */,
 				22088F72265EFF5C00C55B1B /* Sources */,
 				22088F73265EFF5C00C55B1B /* Frameworks */,
 				22088F74265EFF5C00C55B1B /* Resources */,
+				226C04F9266D4CE700C3869E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -210,6 +266,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22088FA3265EFF5E00C55B1B /* Build configuration list for PBXNativeTarget "I Knew It!Tests" */;
 			buildPhases = (
+				AFE64A71FFD924D8F04A277F /* [CP] Check Pods Manifest.lock */,
 				22088F88265EFF5E00C55B1B /* Sources */,
 				22088F89265EFF5E00C55B1B /* Frameworks */,
 				22088F8A265EFF5E00C55B1B /* Resources */,
@@ -228,6 +285,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 22088FA6265EFF5E00C55B1B /* Build configuration list for PBXNativeTarget "I Knew It!UITests" */;
 			buildPhases = (
+				A79C403FD72D9EC0A96BB8D8 /* [CP] Check Pods Manifest.lock */,
 				22088F93265EFF5E00C55B1B /* Sources */,
 				22088F94265EFF5E00C55B1B /* Frameworks */,
 				22088F95265EFF5E00C55B1B /* Resources */,
@@ -294,7 +352,7 @@
 				22088F86265EFF5E00C55B1B /* LaunchScreen.storyboard in Resources */,
 				2276D8E9265F1B03003CA886 /* SF-Pro-Display-Semibold.otf in Resources */,
 				22088F83265EFF5E00C55B1B /* Assets.xcassets in Resources */,
-				22088F81265EFF5C00C55B1B /* Starting.storyboard in Resources */,
+				22088F81265EFF5C00C55B1B /* Main.storyboard in Resources */,
 				2276D8EA265F1B03003CA886 /* SF-Pro-Display-Light.otf in Resources */,
 				2276D8EB265F1B03003CA886 /* SF-Pro-Display-Regular.otf in Resources */,
 				2276D8E1265F1AE3003CA886 /* SF-Pro-Text-Light.otf in Resources */,
@@ -317,14 +375,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		226C04F9266D4CE700C3869E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		A79C403FD72D9EC0A96BB8D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-I Knew It!-I Knew It!UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFE64A71FFD924D8F04A277F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-I Knew It!Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB3D340BDF83C708ED19A386 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-I Knew It!-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		22088F72265EFF5C00C55B1B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */,
+				22857E48266D051200BF4E9C /* Constants.swift in Sources */,
 				22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */,
 				22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */,
+				22857E34266D02E300BF4E9C /* PurpleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,12 +506,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		22088F7F265EFF5C00C55B1B /* Starting.storyboard */ = {
+		22088F7F265EFF5C00C55B1B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				22088F80265EFF5C00C55B1B /* Base */,
 			);
-			name = Starting.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */ = {
@@ -497,6 +643,7 @@
 		};
 		22088FA1265EFF5E00C55B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70E9D01F636E2A22A48D6808 /* Pods-I Knew It!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -516,6 +663,7 @@
 		};
 		22088FA2265EFF5E00C55B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160B928FB8598A6A1E5ABE34 /* Pods-I Knew It!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -535,6 +683,7 @@
 		};
 		22088FA4265EFF5E00C55B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C6228E1DBD26CFBB3B4E933E /* Pods-I Knew It!Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +706,7 @@
 		};
 		22088FA5265EFF5E00C55B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E617960FAF52C7FB2EDF5197 /* Pods-I Knew It!Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -579,6 +729,7 @@
 		};
 		22088FA7265EFF5E00C55B1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77056BC965E1F11EFE6487F0 /* Pods-I Knew It!-I Knew It!UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -599,6 +750,7 @@
 		};
 		22088FA8265EFF5E00C55B1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D86367DD978B05A6EB8E7967 /* Pods-I Knew It!-I Knew It!UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

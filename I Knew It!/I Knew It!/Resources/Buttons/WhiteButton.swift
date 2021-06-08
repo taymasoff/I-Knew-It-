@@ -1,14 +1,14 @@
 //
-//  PurpleButton.swift
+//  WhiteButton.swift
 //  I Knew It!
 //
-//  Created by Тимур Таймасов on 06.06.2021.
+//  Created by Тимур Таймасов on 08.06.2021.
 //
 
 import UIKit
 
 @IBDesignable
-class PurpleButton: UIButton {
+class WhiteButton: UIButton {
     
     // MARK: - Init Methods
     
@@ -30,13 +30,13 @@ class PurpleButton: UIButton {
     
     // MARK: - IBInspectable Properties
     
-    @IBInspectable public var bgColor: UIColor = Colors.purple {
+    @IBInspectable public var bgColor: UIColor = Colors.white {
         didSet {
             updateButton()
         }
     }
     
-    @IBInspectable public var textColor: UIColor = Colors.white {
+    @IBInspectable public var textColor: UIColor = Colors.black {
         didSet {
             updateButton()
         }
@@ -70,5 +70,23 @@ class PurpleButton: UIButton {
         layer.shadowOpacity = 1
         clipsToBounds = true
         layer.masksToBounds = false
+    }
+    
+    func shake() {
+        let shake = CABasicAnimation(keyPath: "position")
+        shake.duration = 0.1
+        shake.repeatCount = 2
+        shake.autoreverses = true
+        
+        let fromPoint = CGPoint(x: center.x - 8, y: center.y)
+        let fromValue = NSValue(cgPoint: fromPoint)
+        
+        let toPoint = CGPoint(x: center.x + 8, y: center.y)
+        let toValue = NSValue(cgPoint: toPoint)
+        
+        shake.fromValue = fromValue
+        shake.toValue = toValue
+        
+        layer.add(shake, forKey: "position")
     }
 }

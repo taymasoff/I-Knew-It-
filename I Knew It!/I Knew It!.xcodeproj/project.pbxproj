@@ -16,6 +16,8 @@
 		22088F86265EFF5E00C55B1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22088F84265EFF5E00C55B1B /* LaunchScreen.storyboard */; };
 		22088F91265EFF5E00C55B1B /* I_Knew_It_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F90265EFF5E00C55B1B /* I_Knew_It_Tests.swift */; };
 		22088F9C265EFF5E00C55B1B /* I_Knew_It_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22088F9B265EFF5E00C55B1B /* I_Knew_It_UITests.swift */; };
+		221C8034266FCA2D000B16D9 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C8033266FCA2D000B16D9 /* QuizViewController.swift */; };
+		221C8039266FCB23000B16D9 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C8038266FCB23000B16D9 /* WhiteButton.swift */; };
 		2276D8E0265F1AE3003CA886 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */; };
 		2276D8E1265F1AE3003CA886 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */; };
 		2276D8E2265F1AE3003CA886 /* SF-Pro-Text-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DF265F1AE3003CA886 /* SF-Pro-Text-Regular.otf */; };
@@ -61,6 +63,8 @@
 		22088F97265EFF5E00C55B1B /* I Knew It!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "I Knew It!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		22088F9B265EFF5E00C55B1B /* I_Knew_It_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = I_Knew_It_UITests.swift; sourceTree = "<group>"; };
 		22088F9D265EFF5E00C55B1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		221C8033266FCA2D000B16D9 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		221C8038266FCB23000B16D9 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 		2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
 		2276D8DF265F1AE3003CA886 /* SF-Pro-Text-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Regular.otf"; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				22088F7D265EFF5C00C55B1B /* StartingViewController.swift */,
+				221C8033266FCA2D000B16D9 /* QuizViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				22857E33266D02E300BF4E9C /* PurpleButton.swift */,
+				221C8038266FCB23000B16D9 /* WhiteButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -449,8 +455,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */,
+				221C8039266FCB23000B16D9 /* WhiteButton.swift in Sources */,
 				22857E48266D051200BF4E9C /* Constants.swift in Sources */,
 				22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */,
+				221C8034266FCA2D000B16D9 /* QuizViewController.swift in Sources */,
 				22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */,
 				22857E34266D02E300BF4E9C /* PurpleButton.swift in Sources */,
 			);

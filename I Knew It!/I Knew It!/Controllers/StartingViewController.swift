@@ -30,6 +30,10 @@ class StartingViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
+        if !animationPerformedOnce {
+            hideUIElements()
+        }
+        
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
@@ -47,11 +51,19 @@ class StartingViewController: UIViewController {
     // MARK: - Segue Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Save and import progress from userdefaults later
+        // TODO: Save and import progress from userdefaults
         let progress = 1
         if progress != 0 {
             descriptionLabel.text = "You current progress is ... ."
             acceptButton.setTitle("Continue", for: .normal)
+        }
+        
+        // Make sure QuizVC have appropriate background color to match the button color
+        if segue.identifier == Segues.toQuiz {
+            if let destinationVC = segue.destination as? QuizViewController {
+                destinationVC.view.backgroundColor = Colors.purple
+                destinationVC.seguedFromStartingVC = true
+            }
         }
     }
 }
@@ -60,6 +72,12 @@ class StartingViewController: UIViewController {
 private extension StartingViewController {
     
     // MARK: - Animations Management
+    
+    /// Hides some elements for fadeIn animation
+    func hideUIElements() {
+        descriptionLabel.alpha = 0.0
+        acceptButton.alpha = 0.0
+    }
     
     /// Do all animations needed at view appearance
     func animateStuff() {
@@ -86,7 +104,6 @@ private extension StartingViewController {
     
     /// Fade In label animation
     func fadeInDescriptionLabel() {
-        descriptionLabel.alpha = 0.0
         UIView.animate(
             withDuration: 1.0,
             delay: 1.0,
@@ -98,7 +115,6 @@ private extension StartingViewController {
     
     /// Fade In button animation
     func fadeInButton() {
-        acceptButton.alpha = 0.0
         UIView.animate(
             withDuration: 1.0,
             delay: 1.5,

@@ -8,6 +8,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
         <array key="SF-Pro-Display-Regular.otf">
             <string>SFProDisplay-Regular</string>
         </array>
@@ -108,32 +111,135 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="75.669642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Quiz View Controller-->
         <scene sceneID="W3c-rW-eD6">
             <objects>
-                <viewController id="DTt-46-ERC" sceneMemberID="viewController">
+                <viewController id="DTt-46-ERC" customClass="QuizViewController" customModule="I_Knew_It_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQ2-xr-iKo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What movie is described?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-KF-nHe">
+                                <rect key="frame" x="40" y="208" width="334" height="33"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQd-ji-Pzh">
+                                <rect key="frame" x="20" y="271" width="374" height="168"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wCP-BY-mfO">
+                                <rect key="frame" x="20" y="571" width="374" height="245"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhN-gw-eQM" customClass="WhiteButton" customModule="I_Knew_It_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="rjB-bp-iod"/>
+                                        </constraints>
+                                        <state key="normal" title="Answer One"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="DTt-46-ERC" eventType="touchUpInside" id="Eey-s4-BrT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUR-s1-xrJ" customClass="WhiteButton" customModule="I_Knew_It_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="65" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="kYl-nD-70N"/>
+                                        </constraints>
+                                        <state key="normal" title="Answer Two"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="DTt-46-ERC" eventType="touchUpInside" id="RoX-xv-D2S"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYV-vM-TUF" customClass="WhiteButton" customModule="I_Knew_It_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="130" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="UYu-Av-MED"/>
+                                        </constraints>
+                                        <state key="normal" title="Answer Three"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="DTt-46-ERC" eventType="touchUpInside" id="bQ5-A9-oxZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhE-N9-NOh" customClass="WhiteButton" customModule="I_Knew_It_" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="195" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="jgT-mF-S2b"/>
+                                        </constraints>
+                                        <state key="normal" title="Answer Four"/>
+                                        <connections>
+                                            <action selector="answerButtonPressed:" destination="DTt-46-ERC" eventType="touchUpInside" id="Edn-gK-RhD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <progressView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="o1Z-xu-fX5">
+                                <rect key="frame" x="10" y="108" width="394" height="4"/>
+                                <color key="progressTintColor" name="ThePurpleColor"/>
+                            </progressView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="uS2-j7-oDy"/>
-                        <color key="backgroundColor" name="ThePurpleColor"/>
+                        <color key="backgroundColor" name="MainBGColor"/>
+                        <constraints>
+                            <constraint firstItem="jQd-ji-Pzh" firstAttribute="leading" secondItem="uS2-j7-oDy" secondAttribute="leading" constant="20" id="3ji-RA-Ewj"/>
+                            <constraint firstItem="uS2-j7-oDy" firstAttribute="trailing" secondItem="jQd-ji-Pzh" secondAttribute="trailing" constant="20" id="DE7-HI-h1g"/>
+                            <constraint firstItem="wCP-BY-mfO" firstAttribute="leading" secondItem="uS2-j7-oDy" secondAttribute="leading" constant="20" id="Dv3-Ee-lfj"/>
+                            <constraint firstItem="JmV-KF-nHe" firstAttribute="top" secondItem="o1Z-xu-fX5" secondAttribute="top" priority="900" constant="100" id="J9t-5G-NIj"/>
+                            <constraint firstItem="o1Z-xu-fX5" firstAttribute="leading" secondItem="uS2-j7-oDy" secondAttribute="leading" constant="10" id="SaL-dk-JVC"/>
+                            <constraint firstAttribute="trailing" secondItem="JmV-KF-nHe" secondAttribute="trailing" constant="40" id="UGy-0I-I4L"/>
+                            <constraint firstItem="uS2-j7-oDy" firstAttribute="trailing" secondItem="o1Z-xu-fX5" secondAttribute="trailing" constant="10" id="Vsl-C1-kzh"/>
+                            <constraint firstItem="JmV-KF-nHe" firstAttribute="leading" secondItem="uS2-j7-oDy" secondAttribute="leading" constant="40" id="dwg-is-TPD"/>
+                            <constraint firstItem="uS2-j7-oDy" firstAttribute="trailing" secondItem="wCP-BY-mfO" secondAttribute="trailing" constant="20" id="fJv-sy-SRs"/>
+                            <constraint firstItem="o1Z-xu-fX5" firstAttribute="top" secondItem="uS2-j7-oDy" secondAttribute="top" constant="20" id="fYh-rG-yaM"/>
+                            <constraint firstAttribute="bottom" secondItem="wCP-BY-mfO" secondAttribute="bottom" constant="80" id="mKM-m8-MYa"/>
+                            <constraint firstItem="wCP-BY-mfO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jQd-ji-Pzh" secondAttribute="bottom" constant="30" id="qgI-Ht-xIL"/>
+                            <constraint firstItem="jQd-ji-Pzh" firstAttribute="top" secondItem="JmV-KF-nHe" secondAttribute="bottom" constant="30" id="rJP-Ek-gun"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nkB-dK-suY"/>
+                    <connections>
+                        <outlet property="answerButton1" destination="MhN-gw-eQM" id="fh2-GS-loA"/>
+                        <outlet property="answerButton2" destination="zUR-s1-xrJ" id="mgo-Ct-YT3"/>
+                        <outlet property="answerButton3" destination="aYV-vM-TUF" id="u91-bl-Mdj"/>
+                        <outlet property="answerButton4" destination="JhE-N9-NOh" id="Pm8-jd-BYI"/>
+                        <outlet property="movieDescriptionLabel" destination="jQd-ji-Pzh" id="RcT-el-OHT"/>
+                        <outlet property="progressBar" destination="o1Z-xu-fX5" id="TzS-op-ATa"/>
+                        <outlet property="questionLabel" destination="JmV-KF-nHe" id="FmN-Ia-NEi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ek-mE-7jS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1677" y="76"/>
+            <point key="canvasLocation" x="1676.8115942028987" y="75.669642857142847"/>
         </scene>
     </scenes>
     <designables>
+        <designable name="JhE-N9-NOh">
+            <size key="intrinsicContentSize" width="86" height="30"/>
+        </designable>
+        <designable name="MhN-gw-eQM">
+            <size key="intrinsicContentSize" width="83" height="30"/>
+        </designable>
+        <designable name="aYV-vM-TUF">
+            <size key="intrinsicContentSize" width="95" height="30"/>
+        </designable>
         <designable name="g04-eA-yXw">
-            <size key="intrinsicContentSize" width="74" height="32"/>
+            <size key="intrinsicContentSize" width="74" height="34"/>
+        </designable>
+        <designable name="zUR-s1-xrJ">
+            <size key="intrinsicContentSize" width="83" height="30"/>
         </designable>
     </designables>
     <resources>
         <image name="Logo" width="512" height="512"/>
         <namedColor name="LoadingBGColor">
             <color red="0.1289999932050705" green="0.14499999582767487" blue="0.17599999904632568" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="MainBGColor">
+            <color red="0.082000002264976501" green="0.082000002264976501" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ThePurpleColor">
             <color red="0.41176470588235292" green="0.47450980392156861" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

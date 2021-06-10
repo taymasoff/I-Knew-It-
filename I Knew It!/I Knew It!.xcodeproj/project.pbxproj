@@ -257,6 +257,7 @@
 				22088F72265EFF5C00C55B1B /* Sources */,
 				22088F73265EFF5C00C55B1B /* Frameworks */,
 				22088F74265EFF5C00C55B1B /* Resources */,
+				05F82A2671E3861BF87A8F84 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -294,6 +295,7 @@
 				22088F93265EFF5E00C55B1B /* Sources */,
 				22088F94265EFF5E00C55B1B /* Frameworks */,
 				22088F95265EFF5E00C55B1B /* Resources */,
+				43263A9DC974F58AC43533F9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -381,6 +383,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		05F82A2671E3861BF87A8F84 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I Knew It!/Pods-I Knew It!-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I Knew It!/Pods-I Knew It!-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-I Knew It!/Pods-I Knew It!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43263A9DC974F58AC43533F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I Knew It!-I Knew It!UITests/Pods-I Knew It!-I Knew It!UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-I Knew It!-I Knew It!UITests/Pods-I Knew It!-I Knew It!UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-I Knew It!-I Knew It!UITests/Pods-I Knew It!-I Knew It!UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		A79C403FD72D9EC0A96BB8D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

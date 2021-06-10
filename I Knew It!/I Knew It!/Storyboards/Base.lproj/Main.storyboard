@@ -218,19 +218,19 @@
     </scenes>
     <designables>
         <designable name="JhE-N9-NOh">
-            <size key="intrinsicContentSize" width="99" height="32"/>
+            <size key="intrinsicContentSize" width="96" height="33"/>
         </designable>
         <designable name="MhN-gw-eQM">
-            <size key="intrinsicContentSize" width="95" height="32"/>
+            <size key="intrinsicContentSize" width="93" height="33"/>
         </designable>
         <designable name="aYV-vM-TUF">
-            <size key="intrinsicContentSize" width="109" height="32"/>
+            <size key="intrinsicContentSize" width="106" height="33"/>
         </designable>
         <designable name="g04-eA-yXw">
-            <size key="intrinsicContentSize" width="74" height="32"/>
+            <size key="intrinsicContentSize" width="70" height="33"/>
         </designable>
         <designable name="zUR-s1-xrJ">
-            <size key="intrinsicContentSize" width="96" height="32"/>
+            <size key="intrinsicContentSize" width="93" height="33"/>
         </designable>
     </designables>
     <resources>

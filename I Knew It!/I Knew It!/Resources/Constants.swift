@@ -43,7 +43,7 @@ enum Segues {
 
 // MARK: - API Constants
 enum API {
-    static let key = "api_key=16c7ddad75e756a3870e3bd2da20776b"
+    static let key = "16c7ddad75e756a3870e3bd2da20776b"
     static var language: String {
         return "\(appLanguage)-\(appLanguage)"
     }

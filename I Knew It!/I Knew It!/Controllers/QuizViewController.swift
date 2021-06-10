@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class QuizViewController: UIViewController {
 
@@ -19,6 +20,13 @@ class QuizViewController: UIViewController {
     @IBOutlet fileprivate weak var answerButton3: WhiteButton!
     @IBOutlet fileprivate weak var answerButton4: WhiteButton!
     
+    private var movieManager = MoviesManager()
+    
+    private var movies: Results<MovieModel> = {
+        let realm = try! Realm()
+        return realm.objects(MovieModel.self)
+    }()
+    
     // MARK: - Internal Properties
     
     var seguedFromStartingVC = false
@@ -27,6 +35,10 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        movieManager.delegate = self
+        
+        movieManager.fetchMovies()
         
         // TODO: Load and safe progress in userdefaults later
         progressBar.progress = 0.1
@@ -42,7 +54,10 @@ class QuizViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        animateStuff()
+        // Loading Spinner
+        DispatchQueue.main.async {
+            self.showSpinner(on: self.view)
+        }
     }
     
 }
@@ -99,4 +114,25 @@ private extension QuizViewController {
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
     }
+}
+
+// MARK: - Movies Manager Delegate
+extension QuizViewController: MoviesManagerDelegate {
+   
+    /// Function that tracks when the request is complete and response is recieved
+    /// - Parameter moviesManager: Network stuff
+    func didUpdateMoviesList(_ moviesManager: MoviesManager) {
+        DispatchQueue.main.async {
+            self.removeSpinner()
+            self.animateStuff()
+        }
+        
+    }
+    
+    /// Function that informs if some error occured during the network request
+    /// - Parameter error: Error description
+    func didFailWithError(error: Error) {
+        fatalError("\(error)")
+    }
+    
 }

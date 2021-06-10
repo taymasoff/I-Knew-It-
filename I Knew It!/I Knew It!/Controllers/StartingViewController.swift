@@ -24,7 +24,6 @@ class StartingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -68,7 +67,7 @@ class StartingViewController: UIViewController {
     }
 }
 
-// MARK: - Private Extension - private methods
+// MARK: - Private Extension - Private Methods
 private extension StartingViewController {
     
     // MARK: - Animations Management

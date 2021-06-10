@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YIK-7v-uiP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DTt-46-ERC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -218,19 +218,19 @@
     </scenes>
     <designables>
         <designable name="JhE-N9-NOh">
-            <size key="intrinsicContentSize" width="86" height="30"/>
+            <size key="intrinsicContentSize" width="99" height="32"/>
         </designable>
         <designable name="MhN-gw-eQM">
-            <size key="intrinsicContentSize" width="83" height="30"/>
+            <size key="intrinsicContentSize" width="95" height="32"/>
         </designable>
         <designable name="aYV-vM-TUF">
-            <size key="intrinsicContentSize" width="95" height="30"/>
+            <size key="intrinsicContentSize" width="109" height="32"/>
         </designable>
         <designable name="g04-eA-yXw">
-            <size key="intrinsicContentSize" width="74" height="34"/>
+            <size key="intrinsicContentSize" width="74" height="32"/>
         </designable>
         <designable name="zUR-s1-xrJ">
-            <size key="intrinsicContentSize" width="83" height="30"/>
+            <size key="intrinsicContentSize" width="96" height="32"/>
         </designable>
     </designables>
     <resources>

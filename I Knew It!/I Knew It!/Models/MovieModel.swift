@@ -19,6 +19,8 @@ class MovieModel: Object {
     @objc dynamic var overview: String = ""
     @objc dynamic var posterPath: String = ""
     
+    var similar = List<String>()
+    
     // MARK: - Initialization
     
     convenience init(json: JSON) {
@@ -28,7 +30,6 @@ class MovieModel: Object {
         self.title = json["title"].stringValue
         self.overview = json["overview"].stringValue
         self.posterPath = json["poster_path"].stringValue
-        
     }
     
     @objc open override class func primaryKey() -> String? {

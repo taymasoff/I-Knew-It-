@@ -45,7 +45,8 @@ enum Segues {
 enum API {
     static let key = "16c7ddad75e756a3870e3bd2da20776b"
     static var language: String {
-        return "\(appLanguage)-\(appLanguage)"
+        return "en-en"
+        //return "\(appLanguage)-\(appLanguage)"
     }
 }
 

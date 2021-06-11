@@ -20,7 +20,7 @@ class QuizViewController: UIViewController {
     @IBOutlet fileprivate weak var answerButton3: WhiteButton!
     @IBOutlet fileprivate weak var answerButton4: WhiteButton!
     
-    private var movieManager = MoviesManager()
+    private var moviesManager = MoviesManager()
     
     private var movies: Results<MovieModel> = {
         let realm = try! Realm()
@@ -36,9 +36,13 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        movieManager.delegate = self
+//        if movies.isEmpty {
+//            getNewMovies()
+//        }
         
-        movieManager.fetchMovies()
+        getNewMovies()
+        
+        moviesManager.delegate = self
         
         // TODO: Load and safe progress in userdefaults later
         progressBar.progress = 0.1
@@ -65,6 +69,8 @@ class QuizViewController: UIViewController {
 // MARK: - Private Extension - Private Methods
 private extension QuizViewController {
     
+    // MARK: - UI and Animations
+    
     /// Hides all UI Elements
     func hideUIElements() {
         if seguedFromStartingVC {
@@ -76,6 +82,22 @@ private extension QuizViewController {
             answerButton3.alpha = 0.0
             answerButton4.alpha = 0.0
         }
+    }
+    
+    // TODO: ----
+    func showUI() {
+        
+        // TODO: Add functionality, so user gets a new films every time he runs out of them
+        let currentProgress = 0
+        //
+        
+        movieDescriptionLabel.text = movies[currentProgress].overview
+        answerButton1.setTitle(movies[currentProgress].title, for: .normal)
+        answerButton2.setTitle(movies[currentProgress].similar[0], for: .normal)
+        answerButton3.setTitle(movies[currentProgress].similar[1], for: .normal)
+        answerButton4.setTitle(movies[currentProgress].similar[2], for: .normal)
+        
+        animateStuff()
     }
     
     /// Perform animations
@@ -110,6 +132,19 @@ private extension QuizViewController {
             }, completion: nil)
     }
     
+    // MARK: - Data managing
+    
+    /// Loads movies data from the internet with loading spinner on screen while loading
+    func getNewMovies() {
+        
+        // Loading Spinner
+        DispatchQueue.main.async {
+            self.showSpinner(on: self.view)
+        }
+        
+        moviesManager.fetchMovies()
+    }
+    
     // MARK: - Actions
     @IBAction func answerButtonPressed(_ sender: UIButton) {
         
@@ -120,13 +155,17 @@ private extension QuizViewController {
 extension QuizViewController: MoviesManagerDelegate {
    
     /// Function that tracks when the request is complete and response is recieved
-    /// - Parameter moviesManager: Network stuff
-    func didUpdateMoviesList(_ moviesManager: MoviesManager) {
+    /// - Parameter moviesManager: Network service
+    /// - Parameter moviesList: Movies list loaded from internet
+    func didUpdateMoviesList(_ moviesManager: MoviesManager,
+                             with moviesList: [MovieModel]) {
+        
         DispatchQueue.main.async {
             self.removeSpinner()
-            self.animateStuff()
         }
         
+        // Saving movies array into Realm
+        RealmRecords.saveMoviesData(movies: moviesList)
     }
     
     /// Function that informs if some error occured during the network request

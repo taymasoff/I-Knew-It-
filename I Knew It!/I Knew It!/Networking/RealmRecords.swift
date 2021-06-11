@@ -23,4 +23,13 @@ class RealmRecords {
             print("Realm Error: ", error.localizedDescription)
         }
     }
+    
+    // MARK: - Delete Realm File (for debugging)
+    
+    static func deleteRealm() {
+        let realm = try! Realm()
+        try! realm.write {
+          realm.deleteAll()
+        }
+    }
 }

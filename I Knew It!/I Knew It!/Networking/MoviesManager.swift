@@ -36,14 +36,16 @@ struct MoviesManager {
         
         getPopularMovies(with: urlComponents) { movies in
             // Sends 10 of popular movies to findsimilar, so each film have 3 similar movies in model
-            addsimilarMovies(to: Array(movies.shuffled().prefix(10)))
+            addSimilarMovies(to: Array(movies.shuffled().prefix(10))) { movies in
+                delegate?.didUpdateMoviesList(self, with: movies)
+            }
         }
     }
     
     /// Fuction that sends HTTP request on searching similar movies
     /// - Parameter id: ID of the movie  you want to find similar movies for
-    func fetchsimilarMovies(by id: String,
-                             completion: @escaping (_ similarMovies: [String]) -> Void) {
+    func fetchSimilarMovies(by id: String,
+                             callback: @escaping (_ similarMovies: [String]) -> Void) {
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -55,8 +57,8 @@ struct MoviesManager {
             URLQueryItem(name: "page", value: "1")
         ]
         
-        getsimilarMovies(with: urlComponents) { similarMovies in
-            completion(similarMovies)
+        getSimilarMovies(with: urlComponents) { similarMovies in
+            callback(similarMovies)
         }
     }
     
@@ -67,7 +69,7 @@ struct MoviesManager {
     ///     - Language code
     ///     - Page
     func getPopularMovies(with urlComponents: URLComponents,
-                          completion: @escaping (_ movies: [MovieModel]) -> Void) {
+                          callback: @escaping (_ movies: [MovieModel]) -> Void) {
         
         AF.request(urlComponents.url!, method: .get)
             .validate()
@@ -80,7 +82,7 @@ struct MoviesManager {
                     
                     print("Movies data was loaded from the internet")
                     
-                    completion(movies)
+                    callback(movies)
                     
                 case .failure(let error):
                     delegate?.didFailWithError(error: error)
@@ -91,18 +93,22 @@ struct MoviesManager {
     
     /// Finds 3 similar movies for each MovieModel in MovieModel array and writes it into similar property
     /// - Parameter movies: MovieModel array
-    func addsimilarMovies(to movies: [MovieModel]) {
-        
+    func addSimilarMovies(to movies: [MovieModel],
+                          callback: (_ movies: [MovieModel]) -> Void) {
+        // We need to finish all tasks before executing callback
+        let group = DispatchGroup()
         for movie in movies {
-            fetchsimilarMovies(by: movie.id) { similarMovies in
+            group.enter()
+            fetchSimilarMovies(by: movie.id) { similarMovies in
                 // We only need 3 similar movies
                 Array(similarMovies.shuffled().prefix(3)).forEach {
                     movie.similar.append($0)
                 }
-                //movie.similar = Array(similarMovies.shuffled().prefix(3))
+                group.leave()
             }
-            delegate?.didUpdateMoviesList(self, with: movies)
         }
+        group.wait()
+        callback(movies)
     }
     
     /// GET request function that recieves JSON data, containing array of similar movies
@@ -111,8 +117,8 @@ struct MoviesManager {
     ///     - API Key
     ///     - Language code
     ///     - Page
-    func getsimilarMovies(with urlComponents: URLComponents,
-                           completion: @escaping (_ similarMovies: [String]) -> Void) {
+    func getSimilarMovies(with urlComponents: URLComponents,
+                           callback: @escaping (_ similarMovies: [String]) -> Void) {
         
         AF.request(urlComponents.url!, method: .get)
             .validate()
@@ -126,7 +132,7 @@ struct MoviesManager {
                     
                     print("similar movies data was loaded from the internet")
                     
-                    completion(similarMovies)
+                    callback(similarMovies)
                     
                 case .failure(let error):
                     delegate?.didFailWithError(error: error)

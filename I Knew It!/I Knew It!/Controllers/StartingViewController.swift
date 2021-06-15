@@ -32,8 +32,6 @@ class StartingViewController: UIViewController {
         if !animationPerformedOnce {
             hideUIElements()
         }
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,18 +40,13 @@ class StartingViewController: UIViewController {
         animateStuff()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: animated);
-        super.viewWillDisappear(animated)
-    }
-    
     // MARK: - Segue Methods
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // TODO: Save and import progress from userdefaults
-        let progress = 1
-        if progress != 0 {
-            descriptionLabel.text = "You current progress is ... ."
+        // TODO: User score
+        let score = 1
+        if score != 0 {
+            descriptionLabel.text = "Your personal score is ... ."
             acceptButton.setTitle("Continue", for: .normal)
         }
         

@@ -1,15 +1,22 @@
 //
-//  I_Knew_It_Tests.swift
+//  MoviesManagerTests.swift
 //  I Knew It!Tests
 //
-//  Created by Тимур Таймасов on 27.05.2021.
+//  Created by Тимур Таймасов on 15.06.2021.
 //
 
 import XCTest
 @testable import I_Knew_It_
 
-class I_Knew_It_Tests: XCTestCase {
+class MoviesManagerTests: XCTestCase {
 
+    var moviesManager = MoviesManager()
+    
+    func testMoviesManagerSucceed() {
+
+
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }

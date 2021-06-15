@@ -96,10 +96,10 @@
         <!--Navigation Controller-->
         <scene sceneID="czx-j1-Y1M">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YIK-7v-uiP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="YIK-7v-uiP" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="u5H-Df-dFn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -219,19 +219,19 @@
     </scenes>
     <designables>
         <designable name="JhE-N9-NOh">
-            <size key="intrinsicContentSize" width="86" height="30"/>
+            <size key="intrinsicContentSize" width="99" height="32"/>
         </designable>
         <designable name="MhN-gw-eQM">
-            <size key="intrinsicContentSize" width="83" height="30"/>
+            <size key="intrinsicContentSize" width="95" height="32"/>
         </designable>
         <designable name="aYV-vM-TUF">
-            <size key="intrinsicContentSize" width="95" height="30"/>
+            <size key="intrinsicContentSize" width="109" height="32"/>
         </designable>
         <designable name="g04-eA-yXw">
-            <size key="intrinsicContentSize" width="74" height="34"/>
+            <size key="intrinsicContentSize" width="74" height="32"/>
         </designable>
         <designable name="zUR-s1-xrJ">
-            <size key="intrinsicContentSize" width="83" height="30"/>
+            <size key="intrinsicContentSize" width="96" height="32"/>
         </designable>
     </designables>
     <resources>

@@ -22,10 +22,18 @@ class QuizViewController: UIViewController {
     
     private var moviesManager = MoviesManager()
     
+    // TODO: Progress..
+    private var currentProgress = 0
+    
     private var movies: Results<MovieModel> = {
         let realm = try! Realm()
         return realm.objects(MovieModel.self)
     }()
+    
+    private var moviesNotificationToken: NotificationToken?
+    deinit {
+        moviesNotificationToken?.invalidate()
+    }
     
     // MARK: - Internal Properties
     
@@ -36,31 +44,24 @@ class QuizViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if movies.isEmpty {
-//            getNewMovies()
-//        }
-        
-        getNewMovies()
-        
         moviesManager.delegate = self
+        
+        // Hide elements in order to see animations
+        hideUIElements()
+        
+        // Movies data observer. Controls UI reveal when data changes.
+        trackMoviesChange()
         
         // TODO: Load and safe progress in userdefaults later
         progressBar.progress = 0.1
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(seguedFromStartingVC ? false : true)
-        
-        // Hide elements in order to see animation
-        hideUIElements()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        // Loading Spinner
-        DispatchQueue.main.async {
-            self.showSpinner(on: self.view)
+        // Change BG color right away
+        if self.seguedFromStartingVC {
+            self.animateBGColor()
         }
     }
     
@@ -73,39 +74,26 @@ private extension QuizViewController {
     
     /// Hides all UI Elements
     func hideUIElements() {
-        if seguedFromStartingVC {
-            progressBar.alpha = 0.0
-            questionLabel.alpha = 0.0
-            movieDescriptionLabel.alpha = 0.0
-            answerButton1.alpha = 0.0
-            answerButton2.alpha = 0.0
-            answerButton3.alpha = 0.0
-            answerButton4.alpha = 0.0
-        }
+        progressBar.alpha = 0.0
+        questionLabel.alpha = 0.0
+        movieDescriptionLabel.alpha = 0.0
+        answerButton1.alpha = 0.0
+        answerButton2.alpha = 0.0
+        answerButton3.alpha = 0.0
+        answerButton4.alpha = 0.0
     }
     
-    // TODO: ----
+    // TODO: progress
+    /// Puts data to UI and reveals it to the user
     func showUI() {
-        
-        // TODO: Add functionality, so user gets a new films every time he runs out of them
-        let currentProgress = 0
-        //
         
         movieDescriptionLabel.text = movies[currentProgress].overview
         answerButton1.setTitle(movies[currentProgress].title, for: .normal)
         answerButton2.setTitle(movies[currentProgress].similar[0], for: .normal)
         answerButton3.setTitle(movies[currentProgress].similar[1], for: .normal)
         answerButton4.setTitle(movies[currentProgress].similar[2], for: .normal)
-        
-        animateStuff()
-    }
-    
-    /// Perform animations
-    func animateStuff() {
-        if seguedFromStartingVC {
-            animateBGColor()
-            animateInterfaceReveal()
-        }
+
+        animateInterfaceReveal()
     }
     
     /// Animate BGColor change
@@ -119,7 +107,7 @@ private extension QuizViewController {
     func animateInterfaceReveal() {
         UIView.animate(
             withDuration: 1.5,
-            delay: 0.6,
+            delay: 0.5,
             options: .curveEaseIn,
             animations: {
                 self.progressBar.alpha = 1.0
@@ -134,15 +122,24 @@ private extension QuizViewController {
     
     // MARK: - Data managing
     
-    /// Loads movies data from the internet with loading spinner on screen while loading
-    func getNewMovies() {
-        
-        // Loading Spinner
-        DispatchQueue.main.async {
-            self.showSpinner(on: self.view)
-        }
-        
-        moviesManager.fetchMovies()
+    /// Tracks any changes to realm movie object and updates UI accordingly
+    private func trackMoviesChange() {
+        moviesNotificationToken = movies.observe({ [unowned self] change in
+            switch change {
+            case .initial(_):
+                self.hideUIElements()
+                if self.movies.isEmpty {
+                    self.moviesManager.fetchMovies()
+                } else {
+                    self.showUI()
+                }
+            case .update:
+                self.hideUIElements()
+                self.showUI()
+            case .error(let error):
+                print(error.localizedDescription)
+            }
+        })
     }
     
     // MARK: - Actions
@@ -159,10 +156,6 @@ extension QuizViewController: MoviesManagerDelegate {
     /// - Parameter moviesList: Movies list loaded from internet
     func didUpdateMoviesList(_ moviesManager: MoviesManager,
                              with moviesList: [MovieModel]) {
-        
-        DispatchQueue.main.async {
-            self.removeSpinner()
-        }
         
         // Saving movies array into Realm
         RealmRecords.saveMoviesData(movies: moviesList)

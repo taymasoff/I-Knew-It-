@@ -19,7 +19,7 @@ class MovieModel: Object {
     @objc dynamic var overview: String = ""
     @objc dynamic var posterPath: String = ""
     
-    var similar = List<String>()
+    let similar = List<String>()
     
     // MARK: - Initialization
     

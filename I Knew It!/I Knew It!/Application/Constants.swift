@@ -7,15 +7,6 @@
 
 import UIKit
 
-// MARK: - App Language
-var appLanguage: String {
-    switch Locale.current.languageCode {
-        case "ru":
-            return "ru"
-        default:
-            return "en"
-    }
-}
 
 // MARK: - App Color Palette
 enum Colors {

@@ -129,7 +129,7 @@ private extension QuizViewController {
             case .initial(_):
                 self.hideUIElements()
                 if self.movies.isEmpty {
-                    self.moviesManager.fetchMovies()
+                    self.moviesManager.getMovies()
                 } else {
                     self.showUI()
                 }

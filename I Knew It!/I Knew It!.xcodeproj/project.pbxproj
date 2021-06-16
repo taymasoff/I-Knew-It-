@@ -21,6 +21,9 @@
 		2209BD2F2672602800B84ABE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2209BD2E2672602800B84ABE /* Extensions.swift */; };
 		221C8034266FCA2D000B16D9 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C8033266FCA2D000B16D9 /* QuizViewController.swift */; };
 		221C8039266FCB23000B16D9 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221C8038266FCB23000B16D9 /* WhiteButton.swift */; };
+		223B6A3D2679BA3B00620C8D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B6A3C2679BA3B00620C8D /* AppSettings.swift */; };
+		223B6A422679BAC900620C8D /* RequestAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B6A412679BAC900620C8D /* RequestAssembler.swift */; };
+		223B6A472679BB1E00620C8D /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B6A462679BB1E00620C8D /* Errors.swift */; };
 		226462632678110F001641C2 /* MoviesManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 226462622678110F001641C2 /* MoviesManagerTests.swift */; };
 		2276D8E0265F1AE3003CA886 /* SF-Pro-Text-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */; };
 		2276D8E1265F1AE3003CA886 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */; };
@@ -72,6 +75,9 @@
 		2209BD2E2672602800B84ABE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		221C8033266FCA2D000B16D9 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		221C8038266FCB23000B16D9 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		223B6A3C2679BA3B00620C8D /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		223B6A412679BAC900620C8D /* RequestAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestAssembler.swift; sourceTree = "<group>"; };
+		223B6A462679BB1E00620C8D /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		226462622678110F001641C2 /* MoviesManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManagerTests.swift; sourceTree = "<group>"; };
 		2276D8DD265F1AE2003CA886 /* SF-Pro-Text-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Semibold.otf"; sourceTree = "<group>"; };
 		2276D8DE265F1AE2003CA886 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
@@ -144,12 +150,12 @@
 		22088F78265EFF5C00C55B1B /* I Knew It! */ = {
 			isa = PBXGroup;
 			children = (
+				22088FB1265F00A200C55B1B /* Application */,
 				22088FAF265F003700C55B1B /* Storyboards */,
 				22FAFF8B2672340D0061FECD /* Models */,
 				22088FB5265F00BD00C55B1B /* Controllers */,
 				22FAFF9926723BB30061FECD /* Networking */,
 				22088FB0265F009600C55B1B /* Resources */,
-				22088FB1265F00A200C55B1B /* SupportingFiles */,
 			);
 			path = "I Knew It!";
 			sourceTree = "<group>";
@@ -184,8 +190,6 @@
 		22088FB0265F009600C55B1B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				2209BD2626725D9400B84ABE /* Constants.swift */,
-				2209BD2E2672602800B84ABE /* Extensions.swift */,
 				22857E32266D021C00BF4E9C /* Buttons */,
 				2276D8DC265F1ABC003CA886 /* Fonts */,
 				22088F82265EFF5E00C55B1B /* Assets.xcassets */,
@@ -193,14 +197,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		22088FB1265F00A200C55B1B /* SupportingFiles */ = {
+		22088FB1265F00A200C55B1B /* Application */ = {
 			isa = PBXGroup;
 			children = (
 				22088F79265EFF5C00C55B1B /* AppDelegate.swift */,
 				22088F7B265EFF5C00C55B1B /* SceneDelegate.swift */,
+				223B6A3C2679BA3B00620C8D /* AppSettings.swift */,
+				2209BD2626725D9400B84ABE /* Constants.swift */,
+				2209BD2E2672602800B84ABE /* Extensions.swift */,
 				22088F87265EFF5E00C55B1B /* Info.plist */,
 			);
-			path = SupportingFiles;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		22088FB5265F00BD00C55B1B /* Controllers */ = {
@@ -245,8 +252,10 @@
 		22FAFF9926723BB30061FECD /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				223B6A412679BAC900620C8D /* RequestAssembler.swift */,
 				22FAFF8C2672358A0061FECD /* MoviesManager.swift */,
 				2209BD15267255EE00B84ABE /* RealmRecords.swift */,
+				223B6A462679BB1E00620C8D /* Errors.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -521,15 +530,18 @@
 			files = (
 				22FAFF8D2672358A0061FECD /* MoviesManager.swift in Sources */,
 				22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */,
+				223B6A3D2679BA3B00620C8D /* AppSettings.swift in Sources */,
 				221C8039266FCB23000B16D9 /* WhiteButton.swift in Sources */,
 				22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */,
 				2209BD012672466000B84ABE /* MovieModel.swift in Sources */,
+				223B6A472679BB1E00620C8D /* Errors.swift in Sources */,
 				2209BD16267255EE00B84ABE /* RealmRecords.swift in Sources */,
 				221C8034266FCA2D000B16D9 /* QuizViewController.swift in Sources */,
 				2209BD2F2672602800B84ABE /* Extensions.swift in Sources */,
 				22088F7C265EFF5C00C55B1B /* SceneDelegate.swift in Sources */,
 				22857E34266D02E300BF4E9C /* PurpleButton.swift in Sources */,
 				2209BD2726725D9400B84ABE /* Constants.swift in Sources */,
+				223B6A422679BAC900620C8D /* RequestAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,15 +718,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JWKUVZUV6F;
-				INFOPLIST_FILE = "I Knew It!/SupportingFiles/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "I Knew It!/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taymasoff.I-Knew-It-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -726,15 +740,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JWKUVZUV6F;
-				INFOPLIST_FILE = "I Knew It!/SupportingFiles/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "I Knew It!/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.taymasoff.I-Knew-It-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

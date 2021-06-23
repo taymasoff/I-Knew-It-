@@ -11,3 +11,8 @@ I was trying to make cool animations and transitions. I think it went well.
 Movies are generated from themoviedb popular movies. Each movie gets 3 similar to complicate a choice. When done, object is recorded to realm, so user can continue even if app was once closed. Each time realm object is updated UI will update automatically.
 
 <img src="https://user-images.githubusercontent.com/29929897/121979007-0653b300-cd92-11eb-8106-0435d054e2ea.jpg" height="620">
+
+## Basic game mechanics added.
+User can now choose answer, buttons will react to it, and game will present the right answer with poster to that film.
+
+<img src="https://user-images.githubusercontent.com/29929897/123083210-8334fb80-d428-11eb-8c3c-48a0f1b77766.gif" height="620">

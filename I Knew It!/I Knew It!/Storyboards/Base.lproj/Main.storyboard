@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YIK-7v-uiP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DTt-46-ERC">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -119,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What movie is described?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-KF-nHe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What movie is described?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmV-KF-nHe">
                                 <rect key="frame" x="40" y="164" width="334" height="33"/>
                                 <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="28"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -196,7 +196,7 @@
                             <constraint firstItem="uS2-j7-oDy" firstAttribute="trailing" secondItem="wCP-BY-mfO" secondAttribute="trailing" constant="20" id="fJv-sy-SRs"/>
                             <constraint firstItem="o1Z-xu-fX5" firstAttribute="top" secondItem="uS2-j7-oDy" secondAttribute="top" constant="20" id="fYh-rG-yaM"/>
                             <constraint firstAttribute="bottom" secondItem="wCP-BY-mfO" secondAttribute="bottom" constant="80" id="mKM-m8-MYa"/>
-                            <constraint firstItem="wCP-BY-mfO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jQd-ji-Pzh" secondAttribute="bottom" constant="30" id="qgI-Ht-xIL"/>
+                            <constraint firstItem="wCP-BY-mfO" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jQd-ji-Pzh" secondAttribute="bottom" constant="20" id="qgI-Ht-xIL"/>
                             <constraint firstItem="jQd-ji-Pzh" firstAttribute="top" secondItem="JmV-KF-nHe" secondAttribute="bottom" constant="30" id="rJP-Ek-gun"/>
                         </constraints>
                     </view>
@@ -210,11 +210,81 @@
                         <outlet property="movieDescriptionLabel" destination="jQd-ji-Pzh" id="RcT-el-OHT"/>
                         <outlet property="progressBar" destination="o1Z-xu-fX5" id="TzS-op-ATa"/>
                         <outlet property="questionLabel" destination="JmV-KF-nHe" id="FmN-Ia-NEi"/>
+                        <outletCollection property="buttons" destination="zUR-s1-xrJ" collectionClass="NSMutableArray" id="kIm-h2-0d5"/>
+                        <outletCollection property="buttons" destination="aYV-vM-TUF" collectionClass="NSMutableArray" id="Oji-D4-tkW"/>
+                        <outletCollection property="buttons" destination="JhE-N9-NOh" collectionClass="NSMutableArray" id="b8D-qT-CsO"/>
+                        <outletCollection property="buttons" destination="MhN-gw-eQM" collectionClass="NSMutableArray" id="QjH-6A-aII"/>
+                        <segue destination="Jil-2G-ihK" kind="show" identifier="toAnswer" id="wqV-z8-vgR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ek-mE-7jS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676.8115942028987" y="75.669642857142847"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="tKh-jl-2Cv">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Jil-2G-ihK" customClass="AnswerViewController" customModule="I_Knew_It_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uk3-fF-BYD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The right answer is:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffJ-3W-hSJ">
+                                <rect key="frame" x="40" y="164" width="334" height="28"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUK-ox-VCU" customClass="PurpleButton" customModule="I_Knew_It_" customModuleProvider="target">
+                                <rect key="frame" x="20" y="766" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6ql-sF-L9D"/>
+                                </constraints>
+                                <state key="normal" title="I Knew It!"/>
+                                <connections>
+                                    <action selector="IKnewItPressed:" destination="Jil-2G-ihK" eventType="touchUpInside" id="lwB-ZZ-99z"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer One" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qow-Te-PhJ">
+                                <rect key="frame" x="20" y="200" width="374" height="35"/>
+                                <fontDescription key="fontDescription" name="SFProDisplay-Semibold" family="SF Pro Display" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SWz-N4-i7f">
+                                <rect key="frame" x="0.0" y="255" width="414" height="431"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lHI-9H-xtr"/>
+                        <color key="backgroundColor" name="MainBGColor"/>
+                        <constraints>
+                            <constraint firstItem="VUK-ox-VCU" firstAttribute="leading" secondItem="lHI-9H-xtr" secondAttribute="leading" constant="20" id="35M-5x-M0e"/>
+                            <constraint firstItem="SWz-N4-i7f" firstAttribute="top" secondItem="Qow-Te-PhJ" secondAttribute="bottom" constant="20" id="4gw-pO-9Nz"/>
+                            <constraint firstItem="Qow-Te-PhJ" firstAttribute="leading" secondItem="lHI-9H-xtr" secondAttribute="leading" constant="20" id="DAD-Qw-vNJ"/>
+                            <constraint firstItem="Qow-Te-PhJ" firstAttribute="top" secondItem="ffJ-3W-hSJ" secondAttribute="bottom" constant="8" id="EEc-Ao-wHi"/>
+                            <constraint firstItem="SWz-N4-i7f" firstAttribute="leading" secondItem="lHI-9H-xtr" secondAttribute="leading" id="EmH-mB-wzh"/>
+                            <constraint firstAttribute="trailing" secondItem="ffJ-3W-hSJ" secondAttribute="trailing" constant="40" id="Lce-Qg-MPo"/>
+                            <constraint firstItem="lHI-9H-xtr" firstAttribute="trailing" secondItem="Qow-Te-PhJ" secondAttribute="trailing" constant="20" id="ZjJ-Um-Dbn"/>
+                            <constraint firstItem="ffJ-3W-hSJ" firstAttribute="leading" secondItem="lHI-9H-xtr" secondAttribute="leading" constant="40" id="aF2-fH-RoA"/>
+                            <constraint firstItem="VUK-ox-VCU" firstAttribute="top" secondItem="SWz-N4-i7f" secondAttribute="bottom" constant="80" id="bDP-7e-Bhm"/>
+                            <constraint firstItem="ffJ-3W-hSJ" firstAttribute="top" secondItem="lHI-9H-xtr" secondAttribute="top" constant="120" id="dpH-oN-rJQ"/>
+                            <constraint firstItem="lHI-9H-xtr" firstAttribute="trailing" secondItem="VUK-ox-VCU" secondAttribute="trailing" constant="20" id="gle-Lw-jSd"/>
+                            <constraint firstItem="lHI-9H-xtr" firstAttribute="trailing" secondItem="SWz-N4-i7f" secondAttribute="trailing" id="kdT-m5-hDt"/>
+                            <constraint firstAttribute="bottom" secondItem="VUK-ox-VCU" secondAttribute="bottom" constant="80" id="zME-3V-308"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5rL-S7-kV0"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="answerLabel" destination="Qow-Te-PhJ" id="vbY-yi-BQl"/>
+                        <outlet property="moviePoster" destination="SWz-N4-i7f" id="vbV-O6-bJ5"/>
+                        <segue destination="kfX-9O-fPE" kind="unwind" identifier="unwindToQuiz" unwindAction="unwindToQuizWithSender:" id="P7B-DD-1m4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ONM-Vb-zFs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kfX-9O-fPE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2471" y="76"/>
         </scene>
     </scenes>
     <designables>
@@ -223,6 +293,9 @@
         </designable>
         <designable name="MhN-gw-eQM">
             <size key="intrinsicContentSize" width="95" height="32"/>
+        </designable>
+        <designable name="VUK-ox-VCU">
+            <size key="intrinsicContentSize" width="74" height="32"/>
         </designable>
         <designable name="aYV-vM-TUF">
             <size key="intrinsicContentSize" width="109" height="32"/>

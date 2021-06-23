@@ -12,6 +12,8 @@ import UIKit
 enum Colors {
     static let purple = UIColor(red: 0.412, green: 0.475, blue: 0.973, alpha: 1)
     static let purpleShadow = UIColor(red: 0.196, green: 0.196, blue: 0.279, alpha: 0.06)
+    static let red = UIColor(red: 1, green: 0.392, blue: 0.486, alpha: 1)
+    static let green = UIColor(red: 0, green: 0.769, blue: 0.549, alpha: 1)
     static let white = UIColor.white
     static let black = UIColor.black
     static let mainBackground = UIColor(red: 0.082, green: 0.082, blue: 0.133, alpha: 1)
@@ -30,6 +32,8 @@ enum Fonts {
 // MARK: - Segue Identifiers
 enum Segues {
     static let toQuiz = "toQuiz"
+    static let toAnswer = "toAnswer"
+    static let unwindToQuiz = "unwindToQuiz"
 }
 
 // MARK: - API Constants

@@ -7,6 +7,19 @@
 
 import Foundation
 
+//enum GameError: Error {
+//    case progressNotFound
+//}
+//
+//extension GameError {
+//    var description: String? {
+//        switch self {
+//        case .progressNotFound:
+//            return "Could not find the game progress in UserDefaults"
+//        }
+//    }
+//}
+
 enum NetworkError: Error {
     case invalidURL
 }

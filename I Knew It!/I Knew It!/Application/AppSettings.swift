@@ -16,10 +16,12 @@ enum Difficulty {
 }
 
 // MARK: - Application Settings
-struct AppSettings {
+class AppSettings {
     
     // MARK: - Singleton
     static let shared = AppSettings()
+    
+    private init() { }
     
     // MARK: - Difficulty level
     var difficulty: Difficulty {

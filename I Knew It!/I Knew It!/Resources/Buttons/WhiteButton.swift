@@ -72,8 +72,11 @@ class WhiteButton: UIButton {
         layer.masksToBounds = false
     }
     
-    func shake() {
+    // MARK: - Animations
+    
+    internal func failShake() {
         let shake = CABasicAnimation(keyPath: "position")
+        
         shake.duration = 0.1
         shake.repeatCount = 2
         shake.autoreverses = true
@@ -87,6 +90,19 @@ class WhiteButton: UIButton {
         shake.fromValue = fromValue
         shake.toValue = toValue
         
-        layer.add(shake, forKey: "position")
+        layer.add(shake, forKey: "shake")
+    }
+    
+    internal func successPop() {
+        let pop = CABasicAnimation(keyPath: "transform")
+        
+        pop.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
+        pop.duration = 0.125
+        pop.repeatCount = 1
+        pop.autoreverses = true
+        pop.isRemovedOnCompletion = true
+        pop.toValue = CATransform3DMakeScale(1.1, 1.1, 1.0)
+        
+        layer.add(pop, forKey: "pop")
     }
 }

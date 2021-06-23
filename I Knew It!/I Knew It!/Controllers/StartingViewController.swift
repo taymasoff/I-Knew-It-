@@ -144,7 +144,7 @@ private extension StartingViewController {
                     }, completion: { _ in
                         // Performs non-animated segue as soon as button fills the screen
                         self.performSegue(withIdentifier: Segues.toQuiz, sender: nil)
-                        
+                
                         // Brings it all back to original values
                         self.acceptButton.transform = CGAffineTransform.identity
                         self.acceptButton.titleLabel?.alpha = 1.0

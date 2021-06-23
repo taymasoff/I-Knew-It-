@@ -32,6 +32,8 @@
 		2276D8EA265F1B03003CA886 /* SF-Pro-Display-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */; };
 		2276D8EB265F1B03003CA886 /* SF-Pro-Display-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */; };
 		22857E34266D02E300BF4E9C /* PurpleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22857E33266D02E300BF4E9C /* PurpleButton.swift */; };
+		22901773267C5B11001FD739 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22901772267C5B10001FD739 /* AnswerViewController.swift */; };
+		22C9F8B4267BD57C002B3473 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C9F8B3267BD57C002B3473 /* ProgressManager.swift */; };
 		22FAFF8D2672358A0061FECD /* MoviesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22FAFF8C2672358A0061FECD /* MoviesManager.swift */; };
 		A2D53E0343292D046E0081E5 /* Pods_I_Knew_It_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62AAE0397B17BBC635DB96C9 /* Pods_I_Knew_It_.framework */; };
 		A3EA69861B2ED9E6DD36516C /* Pods_I_Knew_It__I_Knew_It_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FD4D486A2822B2F83EB9946 /* Pods_I_Knew_It__I_Knew_It_UITests.framework */; };
@@ -86,6 +88,8 @@
 		2276D8E7265F1B03003CA886 /* SF-Pro-Display-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Light.otf"; sourceTree = "<group>"; };
 		2276D8E8265F1B03003CA886 /* SF-Pro-Display-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Display-Regular.otf"; sourceTree = "<group>"; };
 		22857E33266D02E300BF4E9C /* PurpleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleButton.swift; sourceTree = "<group>"; };
+		22901772267C5B10001FD739 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		22C9F8B3267BD57C002B3473 /* ProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		22FAFF8C2672358A0061FECD /* MoviesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesManager.swift; sourceTree = "<group>"; };
 		62AAE0397B17BBC635DB96C9 /* Pods_I_Knew_It_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_Knew_It_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6FD4D486A2822B2F83EB9946 /* Pods_I_Knew_It__I_Knew_It_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_I_Knew_It__I_Knew_It_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +158,7 @@
 				22088FAF265F003700C55B1B /* Storyboards */,
 				22FAFF8B2672340D0061FECD /* Models */,
 				22088FB5265F00BD00C55B1B /* Controllers */,
-				22FAFF9926723BB30061FECD /* Networking */,
+				22C9F8B8267BD8CC002B3473 /* BusinessLogic */,
 				22088FB0265F009600C55B1B /* Resources */,
 			);
 			path = "I Knew It!";
@@ -215,6 +219,7 @@
 			children = (
 				22088F7D265EFF5C00C55B1B /* StartingViewController.swift */,
 				221C8033266FCA2D000B16D9 /* QuizViewController.swift */,
+				22901772267C5B10001FD739 /* AnswerViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -241,10 +246,29 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		22C9F8B8267BD8CC002B3473 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				22C9F8B3267BD57C002B3473 /* ProgressManager.swift */,
+				22FAFF9926723BB30061FECD /* Networking */,
+				22C9F8BC267BD8F6002B3473 /* Realm */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		22C9F8BC267BD8F6002B3473 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				2209BD15267255EE00B84ABE /* RealmRecords.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		22FAFF8B2672340D0061FECD /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				2209BD002672466000B84ABE /* MovieModel.swift */,
+				223B6A462679BB1E00620C8D /* Errors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,8 +278,6 @@
 			children = (
 				223B6A412679BAC900620C8D /* RequestAssembler.swift */,
 				22FAFF8C2672358A0061FECD /* MoviesManager.swift */,
-				2209BD15267255EE00B84ABE /* RealmRecords.swift */,
-				223B6A462679BB1E00620C8D /* Errors.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -532,6 +554,8 @@
 				22088F7E265EFF5C00C55B1B /* StartingViewController.swift in Sources */,
 				223B6A3D2679BA3B00620C8D /* AppSettings.swift in Sources */,
 				221C8039266FCB23000B16D9 /* WhiteButton.swift in Sources */,
+				22901773267C5B11001FD739 /* AnswerViewController.swift in Sources */,
+				22C9F8B4267BD57C002B3473 /* ProgressManager.swift in Sources */,
 				22088F7A265EFF5C00C55B1B /* AppDelegate.swift in Sources */,
 				2209BD012672466000B84ABE /* MovieModel.swift in Sources */,
 				223B6A472679BB1E00620C8D /* Errors.swift in Sources */,
